@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Engine Guardian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>AI ENGINE GUARDIAN</h2>
+
+    <button id="calibrate">Calibrate (Healthy)</button>
+    <button id="monitor" disabled>Start Monitoring</button>
+
+    <div class="status" id="status">Idle</div>
+
+    <div class="riskbar">
+        <div class="fill" id="fill"></div>
+    </div>
+
+    <div class="status" id="riskText">Risk: 0%</div>
+
+    <canvas id="viz"></canvas>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
