@@ -1,18 +1,18 @@
-#AI Engine Guardian
+AI Engine Guardian
 
-#Real-Time Acoustic Engine Fault Detection (Web-Based Prototype)
+Real-Time Acoustic Engine Fault Detection (Web-Based Prototype)
 
-##Overview
+Overview
 
 AI Engine Guardian is a real-time acoustic anomaly detection system designed to identify abnormal engine behavior using sound analysis. The system records engine audio, builds a statistical profile of healthy operation, and detects deviations during monitoring.
 
 This implementation avoids external machine learning libraries and instead uses mathematical feature extraction and statistical modeling for fault detection.
 
-##Objective
+Objective
 
 The objective of this project is to detect early-stage engine abnormalities by analyzing acoustic signals and computing deviation from a calibrated healthy baseline.
 
-##Methodology
+Methodology
 
 The system operates in two phases:
 
@@ -36,7 +36,7 @@ Converts deviation into a Risk Percentage.
 
 Displays system status based on deviation level.
 
-##Extracted Features
+Extracted Features
 
 The following signal features are computed using Web Audio API:
 
@@ -63,7 +63,7 @@ Root mean square (RMS) of all Z-scores is computed.
 
 The result is scaled to a 0–100 risk score.
 
-##Risk Interpretation
+Risk Interpretation
 
 0–40% → Normal
 
@@ -86,18 +86,13 @@ FFT via AnalyserNode
 Pure mathematical anomaly detection
 
 Project Structure
-
 AI-Engine-Guardian/
-
-index.html
-
-style.css
-
-app.js
-
-README.md
-
-How to Run the Project
+│
+├── index.html
+├── style.css
+├── app.js
+└── README.md
+How to Run
 Step 1: Install Python
 
 Ensure Python is installed on your system.
@@ -124,7 +119,7 @@ Select “Open in Terminal”.
 
 Step 3: Start Local Server
 
-Run the following command:
+Run:
 
 python -m http.server 8000
 
@@ -136,7 +131,7 @@ You should see a message indicating the server is running.
 
 Step 4: Open in Browser
 
-Open the following URL in your browser:
+Open:
 
 http://localhost:8000
 
@@ -144,15 +139,15 @@ Do not open the file directly using file:// because microphone access requires H
 
 Step 5: Calibration and Monitoring
 
-Click “Calibrate (Healthy)”.
+Click Calibrate (Healthy)
 
-Allow microphone access when prompted.
+Allow microphone access when prompted
 
-Keep the engine running at steady RPM for 10 seconds.
+Keep the engine running at steady RPM for 10 seconds
 
-After calibration completes, click “Start Monitoring”.
+After calibration completes, click Start Monitoring
 
-Observe real-time risk percentage and system status.
+Observe real-time risk percentage and system status
 
 Important Notes
 
